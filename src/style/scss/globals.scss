@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$bg: rgba(30, 29, 37, 255);
+$basecolor: rgba(14, 12, 23, 255);
+$shadow: #0a0a0a;
+$defaultRadius: 30px;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $bg;
+  font-family: "Raleway Variable", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(30px);
+}
+
+.card {
+  height: 670px;
+  width: 350px;
+  background: $basecolor;
+  border-radius: $defaultRadius;
+  box-shadow: 0 0 18px $shadow;
+  .card-header {
+    width: 100%;
+    height: 45%;
+    .card-top {
+      height: 92%;
+      border-radius: $defaultRadius $defaultRadius 50% 50%;
+      background-image: url("/assets/Freebie-GradientTextures-Preview-06.webp");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+      div {
+        &:nth-child(2) {
+          margin-top: 20px;
+          padding: 5px;
+          h2 {
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+          p {
+            width: 70%;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .icon-circle {
+    border-radius: 50px;
+    clip-path: circle(50px);
+    background: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    .icon-inside {
+      font-size: 1.5em;
+      opacity: 0.7;
+      transform: translate(25%, 10%);
+    }
+  }
+
+  .play-button {
+    width: 120px;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    transform: translateY(-35px);
+    .icon-circle {
+      width: 70px;
+      height: 70px;
+      margin: inherit;
+      background-image: url("/assets/image.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .icon-inside {
+        transform: translate(15px, 12px);
+        opacity: 1;
+        font-size: 1.75em;
+        color: white;
+      }
+    }
+  }
+
+  div.daily {
+    height: 55%;
+    width: 100%;
+    color: white;
+    text-transform: capitalize;
+    padding: 1rem;
+    p {
+      font-size: 14px;
+      font-weight: normal;
+      color: gray;
+      margin-bottom: 8px;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        transition: filter ease-in-out 300ms;
+        &:hover {
+          filter: brightness(50%);
+          div .icon-arrow-right {
+            transform: translateX(6px);
+          }
+        }
+
+        div {
+          height: 50px;
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          flex: 1 0 0;
+          cursor: default;
+          &:hover {
+            cursor: pointer;
+          }
+          span {
+            display: inherit;
+            h3 {
+              align-self: center;
+              font-size: 16px;
+            }
+            .icon {
+              align-self: center;
+              font-size: 23px;
+              margin-right: 15px;
+            }
+          }
+          .icon-arrow-right {
+            margin-right: 13px;
+            transition: transform ease-in-out 300ms;
+          }
+        }
+        .end-line {
+          height: 1px;
+          background-color: gray;
+          opacity: .2;
+        }
+      }
+    }
+  }
+}
+
+p {
+  font-size: 14px;
+}
