@@ -44,6 +44,7 @@ main {
 .card .card-header .card-top div:nth-child(2) {
   margin-top: 20px;
   padding: 5px;
+  cursor: default;
 }
 .card .card-header .card-top div:nth-child(2) h2 {
   text-transform: capitalize;
@@ -58,12 +59,20 @@ main {
   border-radius: 50px;
   clip-path: circle(50px);
   background: rgba(255, 255, 255, 0.1);
+  transition: background 300ms ease-in-out;
   width: 50px;
   height: 50px;
   padding: 10px;
   cursor: pointer;
 }
+.card .icon-circle:hover {
+  background: rgba(255, 255, 255, 0.23);
+}
+.card .icon-circle:hover .icon-inside {
+  transform: translate(12%, 10%);
+}
 .card .icon-circle .icon-inside {
+  transition: transform 300ms ease-in-out;
   font-size: 1.5em;
   opacity: 0.7;
   transform: translate(25%, 10%);
@@ -89,6 +98,9 @@ main {
   opacity: 1;
   font-size: 1.75em;
   color: white;
+}
+.card .play-button .icon-circle .icon-stop {
+  transform: translate(11px, 12px);
 }
 .card div.daily {
   height: 55%;
