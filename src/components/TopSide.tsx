@@ -17,7 +17,7 @@ const TopSide = (): ReactElement => {
         />
       </div>
       <div>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h2>full body</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla et
           dolores pariatur nobis maiores voluptate
